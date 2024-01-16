@@ -11,7 +11,9 @@ import java.awt.*;
  * This should work with .jpg files, .gif files and some other formats.
  *
  *****************************************************************************/
-public class ImageDemoView  extends JFrame {
+public class ImageDemoView extends JFrame {
+    public static final int WINDOW_WIDTH = 1000,
+                            WINDOW_HEIGHT = 800;
     private Image image;
     public ImageDemoView(Image image) {
         // Initialize the image reference so it shares the image with the Back-End.
@@ -20,7 +22,7 @@ public class ImageDemoView  extends JFrame {
         // Initialize the JFrame.
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("QUACK");
-        this.setSize(1000, 800);
+        this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         this.setVisible(true);
     }
 

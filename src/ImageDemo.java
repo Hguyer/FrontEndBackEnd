@@ -11,7 +11,7 @@ import javax.swing.*;
  * This should work with .jpg files, .gif files and some other formats.
  * 
  *****************************************************************************/
-public class ImageDemo extends JFrame {
+public class ImageDemo {
 	private Image image;
 	private ImageDemoView window;
 	public ImageDemo() {

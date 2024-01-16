@@ -14,24 +14,30 @@ import java.util.Scanner; //need this for user input
  *
  *****************************************************************************************/
 public class NameWriter {
-	private String name = "[Your name here]";
-	private NameWriterView window;
 
-	public NameWriter() {
-		window = new NameWriterView(name);
-	}
+    private String name;
+    private NameWriterView window; // An instance of my front-end.
 
-	public void getUserName() {
-		Scanner console = new Scanner(System.in);
-		System.out.println("What is your name? ");
-		name = console.nextLine();
-		window.setName(name);
-	}
+    public NameWriter() {
+        name = "[Enter your name]";
+        window = new NameWriterView(name);
+    }
 
-	public static void main(String args[]) {
-		NameWriter n = new NameWriter();
-		n.getUserName();
-		// Repaints the window. USE THIS COMMAND LIBERALLY — any time you want to update your window!
-		n.window.repaint();
-	}
+    public void run() {
+        // Get the name from the user
+        System.out.print("Enter your name: ");
+        Scanner s = new Scanner(System.in);
+        name = s.nextLine();
+
+        // Send the name to the window and repaint the window
+        window.setName(name);
+
+        window.repaint();
+    }
+
+    public static void main(String[] args) {
+        NameWriter n = new NameWriter();
+        n.run();
+    }
+
 }

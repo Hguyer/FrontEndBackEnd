@@ -14,36 +14,27 @@ import java.awt.*;
  *****************************************************************************************/
 public class NameWriterView extends JFrame {
 
-    private static final int WINDOW_WIDTH = 500;
-    private static final int WINDOW_HEIGHT = 300;
-
+    public static final int WINDOW_WIDTH = 600, WINDOW_HEIGHT = 500;
     private String name;
 
     public NameWriterView(String name) {
+       this.name = name;
 
-        // Initialize the shared name variable.
-        this.name = name;
+       this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+       this.setTitle("Name Writer");
+       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.setVisible(true);
+   }
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// This tells the program what to do if the user closes
-                                                                // the graphics window.
-        this.setTitle("~~~ NameWriter ~~~");					// This sets the title of the window.
-        this.setSize(500, 300);					// This sets the width and height of the window.
-        this.setVisible(true);					    			// This displays the window.
-    }
+   public void setName(String name) {
+       this.name = name;
+   }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Called implicitly when you say window.repaint()
-    public void paint(Graphics g) {
-
-        // "Erase" the window.
-        g.setColor(Color.CYAN);
-        g.fillRect(0,0, WINDOW_WIDTH, WINDOW_HEIGHT);
-
-        // Draw the user's name.
-        g.setColor(Color.WHITE);
-        g.drawString(name, 100, 100);
-    }
+   @Override
+   public void paint(Graphics g) {
+       g.setColor(Color.WHITE);
+       g.fillRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
+       g.setColor(Color.BLACK);
+       g.drawString(name, WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+   }
 }
