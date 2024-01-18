@@ -4,7 +4,7 @@ import java.awt.*;
  *
  * Program:	SampleGraphicsView
  * Created for Intro. Prog. by: Thibodeaux/Steinberg
- * With Edits for CS2 by: Z. Blickensderfer, Dec. '22
+ * With Edits for CS2 by: Zach Blick, Dec. '22
  *
  * Description:
  * This program demonstrates some basic Java graphics. It introduces these classes (types):
