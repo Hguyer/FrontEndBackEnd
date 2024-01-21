@@ -45,7 +45,7 @@ public class DrawSquares {
     }
 
     public static void main(String[] args) {
-        DrawSquares e = new DrawSquares();
-        e.run();
+        DrawSquares d = new DrawSquares();
+        d.run();
     }
 }
