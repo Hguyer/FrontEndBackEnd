@@ -20,11 +20,11 @@ public class DrawSquares {
     }
 
     public void run() {
-        boolean isPlaying = true;
+        boolean isPlaying;
         do {
             // Get input
             Scanner s = new Scanner(System.in);
-            System.out.print("How many sqares should I draw? ");
+            System.out.print("How many squares should I draw? ");
             int numSquares = s.nextInt();
             s.nextLine();
             System.out.print("How long should their sides be? ");
