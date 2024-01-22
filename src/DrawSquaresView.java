@@ -2,14 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 /******************************************************************************************
  *
- * Program:	Circle, CirclePatters, and CirclePatternsView
- * Created for CS2 @ Menlo School by Z. Blickensderfer on 1/14/23
+ * Program:	DrawSquares and DrawSquaresView
+ * Created for CS2 @ Menlo School by Z. Blickensderfer on 1/19/24
  *
  * Description:
- *  This program prompts the user for a number of circles three times,
- *  first printing a row of circles alternating in color,
- *  then a diagonal of circles (again, alternating in color),
- *  and, finally, a target made of circles that (you guessed it) alternate in color.
+ *  This program prompts the user for a number of squares and a value for thier
+ *  side lengths. Then, it draws all of those sqaures (in green!). It continues
+ *  to repeat this process until the user chooses to exit the program.
  *
  *****************************************************************************************/
 public class DrawSquaresView extends JFrame {
