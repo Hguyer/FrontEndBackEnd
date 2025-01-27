@@ -40,7 +40,6 @@ public class Circle {
     public int getDiameter() {
         return diameter;
     }
-
     public Color getColor() {
         return color;
     }
