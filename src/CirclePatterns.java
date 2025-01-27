@@ -78,7 +78,7 @@ public class CirclePatterns {
             int centerX = 400;
             int centerY = 300;
 
-            int radius = SMALLEST_RADIUS + (numCircles - 1) * CHANGE_IN_RADIUS;
+            int radius = SMALLEST_RADIUS + (numCircles) * CHANGE_IN_RADIUS;
             for (int i = 0; i < numCircles; i++) {
                 Color color;
                 if (i % 2 == 0) {
