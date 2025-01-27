@@ -26,5 +26,22 @@ public class Circle {
 
     public void draw(Graphics g) {
         // TODO: Write the draw() method for a Circle.
+        g.setColor(color);
+        g.fillOval(x, y, diameter, diameter);
+    }
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getDiameter() {
+        return diameter;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }

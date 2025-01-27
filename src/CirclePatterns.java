@@ -38,16 +38,57 @@ public class CirclePatterns {
 
     public void makeRow(int numCircles) {
         // TODO: Write makeRow so it adds the row of circles to the ArrayList of circles.
+        int currentX = FIRST_CORNER_X;
+        int currentY = FIRST_CORNER_Y;
+        for (int i = 0; i < numCircles; i++){
+            Color color;
+            if (i % 2 == 0) {
+                color = Color.BLUE;
+            } else{
+                color = Color.RED;
+            }
+            circles.add(new Circle(currentX, currentY, DIAMETER, color));
+            currentX += DIAMETER;
+        }
+
     }
 
     public void makeDiagonal(int numCircles) {
         // TODO: Write makeDiagonal so it adds the diagonal of circles to the ArrayList of circles.
+        int currentX = FIRST_CORNER_X;
+        int currentY = FIRST_CORNER_Y;
+        for (int i = 0; i < numCircles; i++) {
+            Color color;
+            if (i % 2 == 0) {
+                color = Color.BLUE;
+            } else {
+                color = Color.RED;
+            }
+
+            circles.add(new Circle(currentX, currentY, DIAMETER, color));
+            currentX += DIAMETER;
+            currentY += DIAMETER;
+        }
     }
 
     public void makeTarget(int numCircles) {
         // TODO: Write makeTarget so it adds the target of circles to the ArrayList of circles.
         // Key idea: the circles have to start big, then get small.
         // That way, when drawn in order, they appear on top of each other.
+            int centerX = 400;
+            int centerY = 300;
+
+            int radius = SMALLEST_RADIUS + (numCircles - 1) * CHANGE_IN_RADIUS;
+            for (int i = 0; i < numCircles; i++) {
+                Color color;
+                if (i % 2 == 0) {
+                    color = Color.RED;
+                } else {
+                    color = Color.BLACK;
+                }
+                circles.add(new Circle(centerX - radius, centerY - radius, radius * 2, color));
+                radius -= CHANGE_IN_RADIUS;
+            }
     }
 
     public void run() {
