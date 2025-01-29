@@ -11,16 +11,16 @@ import java.awt.*;
  *****************************************************************************************/
 public class ManyBallsView extends JFrame {
 
-    private Ball b;
+    private Ball[] balls;
     private int windowWidth;
     private int windowHeight;
 
-    public ManyBallsView(int width, int height, Ball b) {
+    public ManyBallsView(int width, int height, Ball balls []) {
         // TODO: modify this constructor to accept an array of Balls, not just one Ball.
         // Initialize instance variables.
         windowWidth = width;
         windowHeight = height;
-        this.b = b;
+        this.balls = balls;
 
         // Show the window with the ball in its initial position.
         this.setTitle("MANY BALLS!");
@@ -35,7 +35,9 @@ public class ManyBallsView extends JFrame {
         g.fillRect(0, 0, windowWidth, windowHeight);
 
         // TODO: Modify this to call draw() on all 100 Balls.
+        for(Ball ball: balls){
+            ball.draw(g);
+        }
         // Tell the ball to draw itself.
-        b.draw(g);
     }
 }
