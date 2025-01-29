@@ -50,7 +50,6 @@ public class ManyBalls implements ActionListener {
 	 */
 	public ManyBalls() {
 
-		// TODO: modify this to create an array of 100 random Ball objects.
 		// Initialize the Ball.
 		balls = new Ball[100];
 
@@ -58,8 +57,8 @@ public class ManyBalls implements ActionListener {
 			int radius = (int) (Math.random() * 70) + 1;
 			int x = (int) (Math.random() * (MAX_WIDTH - radius)) + radius;
 			int y = (int) (Math.random() * (MAX_HEIGHT - radius)) + radius;
-			int dx = (int) (Math.random() * 7) - 3;
-			int dy = (int) (Math.random() * 7) - 3;
+			int dx = (int) (Math.random() * 11) - 5;
+			int dy = (int) (Math.random() * 11) - 5;
 			Color color = new Color((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
 			balls[i] = new Ball(x, y, dx, dy, radius, color);
 		}
@@ -68,10 +67,10 @@ public class ManyBalls implements ActionListener {
 
 		// Create the front-end:
 		// Version ONE: our basic view. Notice how the animation is a little jerky?
-		this.window = new ManyBallsView(MAX_WIDTH, MAX_HEIGHT, balls);
+		//this.window = new ManyBallsView(MAX_WIDTH, MAX_HEIGHT, balls);
 
 		// Version TWO: using inheritance, let's make a double-buffered version of ManyBallsView.
-//		this.window = new ManyBallsViewDoubleBuffered(MAX_WIDTH, MAX_HEIGHT, b);
+		this.window = new ManyBallsViewDoubleBuffered(MAX_WIDTH, MAX_HEIGHT, balls);
 
 		// Toolkit.getDefaultToolkit().sync();  // Consider this to reduce flicker
 
@@ -97,7 +96,6 @@ public class ManyBalls implements ActionListener {
 	 */
 	public void actionPerformed(ActionEvent e) {		// NEW #5 !!!!!!!!!!
 
-		// TODO: modify this to call move() and bounce() on all 100 Balls.
 		// Move the ball.
 		for (Ball ball : balls) {
 			ball.move();
